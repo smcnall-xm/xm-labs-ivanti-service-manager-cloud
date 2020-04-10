@@ -13,7 +13,7 @@ Notify on-call response teams when critical incidents are reported in Ivanti Ser
 * [IvantiServiceManager10.zip](IvantiServiceManager10.zip) - download this xMatters Workflow to get started
 
 # How it works
-A Quick Action or Trigger Rule configured in Ivanti triggers a configured Ivanti Web Connection to fire a REST API call to the inbound HTTP trigger in the imported xMatters Workflow (Ivanti Service Manager | 1.0). The Flow Designer step then parses the payload, builds an event and creates and xMatters Event to the Ivanti Incident Owner Team. 
+A Quick Action or Trigger Rule configured in Ivanti triggers the Ivanti Web Connection to fire a REST API call to the inbound HTTP trigger in the imported xMatters Workflow (Ivanti Service Manager | 1.0). The Flow Designer steps parse the payload, build an event, and then create an xMatters Event targeted to the Ivanti Incident Owner Team. 
 
 # Installation
 
@@ -31,16 +31,16 @@ https://help.xmatters.com/ondemand/xmodwelcome/workflows/manage-workflows.htm
 ### Assign permissions to the Workflow and Form  
 * On the *Workflows* page, click the Edit drop-down menu for the **Ivanti Service Manager | 1.0** then select **Editor Permissions**
 * Add any users, groups and/or roles to have editor permissions to this workflow
-* On the *Workflows* page, click the **Ivanti Service Manager | 1.0** then click **Forms**
+* On the *Workflows* page, click the **Ivanti Service Manager | 1.0** then click **FORMS**
 * Click the **Web Service** drop-down menu for the **Incident** form
 * Select **Sender Permissions** then add the xMatters REST integration user
 
 ### Configure Endpoints and Constants  
-* On the *Workflows* page, click the **Ivanti Service Manager | 1.0** then click **Flows**
+* On the *Workflows* page, click the **Ivanti Service Manager | 1.0** then click **FLOWS**
 * Click **Incident**
 * Click the **Components** drop-down button in the upper right then select **Endpoints**
 * For the Ivanti endpoint, type the **Base URL** for the Ivanti environment, for example *https://customer.saasit.com* then **Save** then **Close**
-* Click the **Components** drop-down button in the upper right then select **Constants**, then edit these constants:
+* Click the **Components** drop-down button in the upper right then select **Constants**, and edit these constants:
 
 | Constant                        | Description                                    |
 |:------------------------------- |:---------------------------------------------- |
@@ -116,7 +116,7 @@ var xMattersJSONString = JSON.stringify(incidentData);
 var response = ExecuteWebRequest('POST', url, xMattersJSONString, settings);
 ```
 
-Additional Ivanti properties can be added to both this Web Connection script and then also in xMatters. It is a best practice recommendation to name the property in xMatters the same as Ivanti, for example above the Ivanti property `Category` is the same property configured in xMatters `Category`.
+Additional Ivanti properties can be added to both this Web Connection script and then also in xMatters. It is a best practice recommendation to name the property in xMatters the same as Ivanti, for example, above the Ivanti property `Category` is the same property configured in xMatters `Category`.
 
 #### Get the xMatters Basic Auth Endpoint URL
 * On the *Workflows* page, click the **Ivanti Service Manager | 1.0** then click **FLOWS**
@@ -125,7 +125,6 @@ Additional Ivanti properties can be added to both this Web Connection script and
 <kbd>
   <img src="media/Ivanti_Step00_xMatters.png" width="50%" height="50%">
 </kbd>
-
 * In the *INITIATION* section click **Basic**
 * Click **Copy** to copy the URL displayed
 * Paste the URL in the Web Connection script
@@ -142,7 +141,7 @@ Create Quick Action(s) and/or Trigger Rule(s) specific to your use cases. These 
 | Reassigned             | trigger when an Incident is reassigned to a different Owner Team and the Incident Priority is 1 or 2 |
 | Reopened               | trigger when an Incident is reopened and the Incident Priority is 1 or 2                             |
 | Priority Upgrade       | trigger when an Incident Priority is upgraded from, for example, 3, 4 or 5 to 1 or 2                 |
-| Priority Downgrade     | trigger when an Incident Priority is downgraded from, for example, 1 or 2 t 3, 4 or 5                |
+| Priority Downgrade     | trigger when an Incident Priority is downgraded from, for example, 1 or 2 to 3, 4 or 5                |
 | Resolved               | trigger when an Incident is resolved                                                                 |
 | Closed                 | trigger when an Incident is closed                                                                   |
 | Canceled               | trigger when an Incident is canceled                                                                 |
@@ -169,7 +168,7 @@ In the following example, the notification is received on an Apple iPhone, but t
   <img src="media/Ivanti_Message_xMattersApp.png" width="30%" height="30%">
 </kbd>
 
-* After viewing the details, either click the respond (blue return arrow) icon at the top or scroll to the bottom of the notification  
+* After viewing the details, either click the respond (blue return arrow) icon at the top or scroll to the bottom of the notification
 
 * Tap the desired response, then tap **Respond now** or **Respond with comment**  
 

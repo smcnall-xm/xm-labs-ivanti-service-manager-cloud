@@ -25,7 +25,7 @@ A Quick Action or Trigger Rule configured in Ivanti triggers the Ivanti Web Conn
 </kbd>
 
 ### Import the Workflow
-Import the Ivanti Service Manager | 1.0 (IvantiServiceManager10.zip) Workflow
+Import the Ivanti Service Manager | 1.0 Workflow
 https://help.xmatters.com/ondemand/xmodwelcome/workflows/manage-workflows.htm
 
 ### Assign permissions to the Workflow and Form  
@@ -80,7 +80,7 @@ The integration requires an API user in Ivanti that is used by xMatters when ret
 As an Administrator, create an xMatters Incident Web Connection in Ivanti.
 
 <kbd>
-  <img src="media/Ivanti_WebConnection_xMatters.png" width="70%" height="70%">
+  <img src="media/Ivanti_WebConnection_xMatters.png" width="90%" height="90%">
 </kbd>
 
 The standard Integration Script is:
@@ -121,10 +121,12 @@ Additional Ivanti properties can be added to both this Web Connection script and
 #### Get the xMatters Basic Auth Endpoint URL
 * On the *Workflows* page, click the **Ivanti Service Manager | 1.0** then click **FLOWS**
 * Click the **Incident** link
-* Locate the **Step 00 | Ivanti Inbound** step then double-click it
+* Locate the **Step 00 | Ivanti Inbound** step then double-click it 
+
 <kbd>
   <img src="media/Ivanti_Step00_xMatters.png" width="50%" height="50%">
-</kbd>
+</kbd>  
+
 * In the *INITIATION* section click **Basic**
 * Click **Copy** to copy the URL displayed
 * Paste the URL in the Web Connection script
@@ -135,14 +137,14 @@ The script includes an `xmTrigger` custom property in Ivanti that is passed as `
 ### Create Quick Action(s) and/or Trigger Rule(s)
 Create Quick Action(s) and/or Trigger Rule(s) specific to your use cases. These will call the xMatters Web Connection which will then alert xMatters to notify the Incident Owner Team. Below are suggested use cases where the use case name is also recommended as the value to use for `xmTrigger` in the Web Connection JSON payload.
 
-| Use Case (`xmTrigger`) | Description                                                                                          |
-|:---------------------- |:---------------------------------------------------------------------------------------------------- |
-| New Incident           | trigger when a new Incident is created based on specific criteria, for example Priority is 1 or 2    |
-| Reassigned             | trigger when an Incident is reassigned to a different Owner Team and the Incident Priority is 1 or 2 |
-| Reopened               | trigger when an Incident is reopened and the Incident Priority is 1 or 2                             |
-| Priority Upgrade       | trigger when an Incident Priority is upgraded from, for example, 3, 4 or 5 to 1 or 2                 |
-| Priority Downgrade     | trigger when an Incident Priority is downgraded from, for example, 1 or 2 to 3, 4 or 5                |
-| Resolved               | trigger when an Incident is resolved                                                                 |
+| Use Case (xmTrigger) | Description                                                                                          |
+|:-------------------- |:---------------------------------------------------------------------------------------------------- |
+| New Incident         | trigger when a new Incident is created based on specific criteria, for example Priority is 1 or 2    |
+| Reassigned           | trigger when an Incident is reassigned to a different Owner Team and the Incident Priority is 1 or 2 |
+| Reopened             | trigger when an Incident is reopened and the Incident Priority is 1 or 2                             |
+| Priority Upgrade     | trigger when an Incident Priority is upgraded from, for example, 3, 4 or 5 to 1 or 2                 |
+| Priority Downgrade   | trigger when an Incident Priority is downgraded from, for example, 1 or 2 to 3, 4 or 5                |
+| Resolved             | trigger when an Incident is resolved                                                                 |
 | Closed                 | trigger when an Incident is closed                                                                   |
 | Canceled               | trigger when an Incident is canceled                                                                 |
 
@@ -160,13 +162,13 @@ In the following example, the notification is received on an Apple iPhone, but t
 
 <kbd>
   <img src="media/Ivanti_Inbox_xMattersApp.png" width="30%" height="30%">
-</kbd>
+</kbd>  
 
 * Opening the notification displays the details  
 
 <kbd>
   <img src="media/Ivanti_Message_xMattersApp.png" width="30%" height="30%">
-</kbd>
+</kbd>  
 
 * After viewing the details, either click the respond (blue return arrow) icon at the top or scroll to the bottom of the notification
 

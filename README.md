@@ -25,7 +25,7 @@ A Quick Action or Trigger Rule configured in Ivanti triggers the Ivanti Web Conn
 </kbd>
 
 ### Import the Workflow
-Import the Ivanti Service Manager | 1.0 Workflow
+Import the Ivanti Service Manager | 1.0 Workflow   
 https://help.xmatters.com/ondemand/xmodwelcome/workflows/manage-workflows.htm
 
 ### Assign permissions to the Workflow and Form  

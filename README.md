@@ -21,7 +21,7 @@ A Quick Action or Trigger Rule configured in Ivanti triggers the Ivanti Web Conn
 ### Create a REST integration user account
 
 <kbd>
-  <img src="media/Ivanti_addAPIUser_xMatters.png" width="70%" height="70%">
+  <img src="media/Ivanti_addAPIUser_xMatters.png" width="500">
 </kbd>
 
 ### Import the Workflow
@@ -80,7 +80,7 @@ The integration requires an API user in Ivanti that is used by xMatters when ret
 As an Administrator, create an xMatters Incident Web Connection in Ivanti.
 
 <kbd>
-  <img src="media/Ivanti_WebConnection_xMatters.png" width="90%" height="90%">
+  <img src="media/Ivanti_WebConnection_xMatters.png" width="900">
 </kbd>
 
 The standard Integration Script is:
@@ -124,7 +124,7 @@ Additional Ivanti properties can be added to both this Web Connection script and
 * Locate the **Step 00 | Ivanti Inbound** step then double-click it 
 
 <kbd>
-  <img src="media/Ivanti_Step00_xMatters.png" width="50%" height="50%">
+  <img src="media/Ivanti_Step00_xMatters.png" width="200">
 </kbd>  
 
 * In the *INITIATION* section click **Basic**
@@ -161,13 +161,13 @@ In the following example, the notification is received on an Apple iPhone, but t
 * Notifications appear in the application Inbox  
 
 <kbd>
-  <img src="media/Ivanti_Inbox_xMattersApp.png" width="30%" height="30%">
+  <img src="media/Ivanti_Inbox_xMattersApp.png" width="250">
 </kbd>  
 
 * Opening the notification displays the details  
 
 <kbd>
-  <img src="media/Ivanti_Message_xMattersApp.png" width="30%" height="30%">
+  <img src="media/Ivanti_Message_xMattersApp.png" width="250">
 </kbd>  
 
 * After viewing the details, either click the respond (blue return arrow) icon at the top or scroll to the bottom of the notification
